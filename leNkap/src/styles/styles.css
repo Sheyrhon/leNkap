@@ -1,16 +1,21 @@
 .appName{
     justify-content: center;
+    align-self: center;
 }
 .profile{
-    margin: 0 auto;
     justify-content: center;
     display: flex;
-    flex-direction: column;
+    margin-top: 40px;
 }
-.profileName{
+.profileName,.appName{
     justify-content: center;
-    color: aqua;
+    align-self: center;
+    font-size: 20;
+    /* margin-left: 40px; */
+    margin-top: 100px;
+
 }
+
 :root{
     --background-color:gray;
 }
