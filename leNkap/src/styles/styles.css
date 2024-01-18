@@ -1,0 +1,16 @@
+.appName{
+    justify-content: center;
+}
+.profile{
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.profileName{
+    justify-content: center;
+    color: aqua;
+}
+:root{
+    --background-color:gray;
+}
