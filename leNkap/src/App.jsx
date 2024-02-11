@@ -1,22 +1,19 @@
-import { Route,Routes } from 'react-router';
-// screens
-
 
 import './index.css'
-import LoginForm from './Login/LoginForm';
-import Register from './Register/Register';
-import ExpenseTracker from './Home';
-
+// import LoginForm from './Login/Login';
+// import Register from './Register/Register';
+// import ExpenseTracker from './Home';
+import Index from './Routes/index';
 
 function App() {
  
 
   return (
     <>
-      <LoginForm/>
-      {/* <Register/>
+      {/* <LoginForm/>
+      <Register/>
       <ExpenseTracker/> */}
-      {/* <Index/> */}
+      <Index/>
 
     </>
   )

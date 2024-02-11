@@ -5,19 +5,20 @@ import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
 //components
 
 
-import LoginForm from "../Login/LoginForm";
+// import LoginForm from "../componets/Login/LoginForm";
 import Register from "../Register/Register";
-import ExpenseTracker from "../Home";
+import ExpenseTracker from "../Home/index";
+import Login from "../Login/Login";
 
 export default function Index() {
   return (
     
       <Routes>
-        <Route exact path="../componets/Login/LoginForm.jsx" Component={<LoginForm />}></Route>
-        <Route path="../componets/Register/Register.jsx" Component={<Register />}></Route>
+        <Route exact path="Login" Component={Login }></Route>
+        <Route path="Register" Component={Register}></Route>
         <Route
-          path="../Home/expenseTracker.jsx"
-          Component={<ExpenseTracker />}
+          path="ExpenseTracker"
+          Component={ExpenseTracker}
         ></Route>
       
       </Routes>
