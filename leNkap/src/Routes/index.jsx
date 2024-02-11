@@ -2,24 +2,25 @@ import React from "react";
 import { ReactDOM } from "react-dom";
 import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-//screens
-import HomeScreen from "../Screens/Home";
-import CreateAccountScreen from "./../Screens/createAccountScreen";
-import ExpensesScreen from "./../Screens/expensesScreen";
-import SplashScreen from "./../Screens/splashScreen";
+//components
+
+
+import LoginForm from "../Login/LoginForm";
+import Register from "../Register/Register";
+import ExpenseTracker from "../Home";
 
 export default function Index() {
   return (
-    <Router>
+    
       <Routes>
-        <Route exact path="/" Component={<SplashScreen />}></Route>
-        <Route path="/Home" Component={<HomeScreen />}></Route>
+        <Route exact path="../componets/Login/LoginForm.jsx" Component={<LoginForm />}></Route>
+        <Route path="../componets/Register/Register.jsx" Component={<Register />}></Route>
         <Route
-          path="/CreateAccountScreen"
-          Component={<CreateAccountScreen />}
+          path="../Home/expenseTracker.jsx"
+          Component={<ExpenseTracker />}
         ></Route>
-        <Route path="/ExpensesScreen" Component={<ExpensesScreen />}></Route>
+      
       </Routes>
-    </Router>
+    
   );
 }

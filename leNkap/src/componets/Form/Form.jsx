@@ -1,40 +1,64 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function Form() {
-  const [inputState, setInputState] = useState({
-    title: "",
-    amount: "",
-    date: "",
-    category: "",
-    description: "",
-  });
-  const { title, amount, date, category, description } = inputState;
-  const handleInput = (name) => (e) => {
-    setInputState({ ...inputState, [name]: e.target.value });
+
+const AddTransaction = (props) => {
+  const [amount, setAmount] = useState();
+  const [description, setDescription] = useState();
+  const [type, setType] = useState("Income");
+  const AddNewTrans = () => {
+    props.addTransaction({
+      amount: Number(amount),
+      description,
+      type,
+      id: Date.now,
+    });
+    console.log({ amount, description, type });
+    props.toggleAddBtn();
   };
   return (
-    <Form>
-      <div className="input-control">
+    <div className="add-transaction-container">
+      <div className="input-box">
         <input
-          type="text"
-          value={title}
-          name={"title"}
-          placeholder="Salary Title"
-          onChange={handleInput("title")}
-        />
-      </div>
-      <div className="input-control">
-        <input
-          type="text"
+          type="number"
+          placeholder="Amount"
+          required
           value={amount}
-          name={"amount"}
-          placeholder="Salary amount"
-          onChange={handleInput("amount")}
+          onChange={(e) => setAmount(e.target.value)}
         />
       </div>
-      <div className="input-control">
-        
+      <div className="input-box">
+        <input
+          type="text"
+          placeholder="Description"
+          required
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
       </div>
-    </Form>
+      <div className="input-box">
+        <input
+          type="radio"
+          id="income"
+          name="type"
+          value="Income"
+          checked={type === "Income"}
+          onChange={(e) => setType(e.target.value)}
+        />
+        <label htmlFor="income">Income</label>
+        <input
+          type="radio"
+          id="expense"
+          name="type"
+          value="Expense"
+          checked={type === "Expense"}
+          onChange={(e) => setType(e.target.value)}
+        />
+        <label htmlFor="expense">Expense</label>
+        <div className="add-transaction">
+          <button onClick={AddNewTrans}>Add Transaction</button>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+export default AddTransaction;
