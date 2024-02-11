@@ -1,8 +1,9 @@
 
+import ExpenseTracker from './Home';
 import './index.css'
-// import LoginForm from './Login/Login';
-// import Register from './Register/Register';
-// import ExpenseTracker from './Home';
+import Login from './Login/Login';
+import Register from './Register/Register';
+
 import Index from './Routes/index';
 
 function App() {
@@ -10,9 +11,7 @@ function App() {
 
   return (
     <>
-      {/* <LoginForm/>
-      <Register/>
-      <ExpenseTracker/> */}
+      {/* <Login/> */}
       <Index/>
 
     </>

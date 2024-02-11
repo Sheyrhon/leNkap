@@ -1,8 +1,7 @@
 import React from "react";
 import {FaUser,FaLock} from 'react-icons/fa'
 import './style.css'
-import Register from "../Register/Register";
-import ExpenseTracker from "../Home";
+
 
 const Login = () => {
   return (

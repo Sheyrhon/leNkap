@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Overview from "./overview";
 import Transaction from "./transaction";
+import Logout from "../Logout/Logout";
 // import CalculateBalance from "../componets/calBalanxe/calculateBalance";
 
 const ExpenseTracker = () => {
@@ -37,6 +38,7 @@ const ExpenseTracker = () => {
         incomes={incomes}
       />
       <Transaction transaction={transaction} />
+      <Logout/>
     </div>
   );
 };
