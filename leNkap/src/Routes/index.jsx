@@ -6,9 +6,9 @@ import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
 // import LoginForm from "../componets/Login/LoginForm";
-import Register from "../Register/Register";
+import Register from "../componets/Register/Register";
 import ExpenseTracker from "../Home/index";
-import Login from "../Login/Login";
+import Login from "../componets/Login/Login";
 
 export default function Index() {
   return (

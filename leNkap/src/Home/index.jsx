@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Overview from "./overview";
 import Transaction from "./transaction";
-import Logout from "../Logout/Logout";
-// import CalculateBalance from "../componets/calBalanxe/calculateBalance";
+import Logout from "../componets/Logout/Logout";
+import Profile from "../componets/profile/profile";
+import Login from "../componets/Login/Login";
+import { LoginContext } from "../context/LoginContext";
+
+
 
 const ExpenseTracker = () => {
   const [transaction, updateTransaction] = useState([]);
   const [expenses, updateExpense] = useState(0);
   const [incomes, updateIncome] = useState(0);
+  const [showProfile, setShowProfile] =useState(false)
+  const [username, setUserName] = useState('')
   const CalculateBalance = () => {
     let expense = 0;
     let income = 0;
@@ -31,6 +37,9 @@ const ExpenseTracker = () => {
 
   return (
     <div className="wrapper">
+     
+      
+     
       <h1>Expense Tracker</h1>
       <Overview
         addTransaction={addTransaction}
@@ -38,7 +47,7 @@ const ExpenseTracker = () => {
         incomes={incomes}
       />
       <Transaction transaction={transaction} />
-      <Logout/>
+      {/* <Logout/> */}
     </div>
   );
 };
