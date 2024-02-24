@@ -1,0 +1,32 @@
+.wrapper{
+    justify-content: center;
+    padding: auto;
+    margin-bottom: 50px;
+}
+.wrapper.balance-box{
+    padding-top: 20px;
+    margin-left: 18px;
+    justify-content: space-between;
+    display: flex;
+    
+
+}
+.balance-box{
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper.transaction-details{
+    justify-content: space-between;
+    display: flex;
+}
+
+.expense-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+.transaction{
+    padding-top: 70px;
+    text-align: center;
+}

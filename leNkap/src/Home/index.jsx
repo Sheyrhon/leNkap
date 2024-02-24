@@ -38,9 +38,12 @@ const ExpenseTracker = () => {
   return (
     <div className="wrapper">
      
-      
-     
+      <div className="app-logout" style={{display:'flex', justifyContent:'space-between'}}>
       <h1>Expense Tracker</h1>
+      {/* <p style={{position:'absolute'}}><a href="/Logout">LogOut</a></p> */}
+      </div>
+     
+     
       <Overview
         addTransaction={addTransaction}
         expenses={expenses}

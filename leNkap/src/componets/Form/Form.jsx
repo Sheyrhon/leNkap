@@ -35,7 +35,7 @@ const AddTransaction = (props) => {
           onChange={(e) => setDescription(e.target.value)}
         />
       </div>
-      <div className="input-box">
+      <div className="input-box-radio" style={{justifyContent:'space-between',marginBottom:5, alignContent:"center"}}>
         <input
           type="radio"
           id="income"
@@ -55,7 +55,14 @@ const AddTransaction = (props) => {
         />
         <label htmlFor="expense">Expense</label>
         <div className="add-transaction">
-          <button onClick={AddNewTrans}>Add Transaction</button>
+          <button 
+          style={{width:150, 
+           
+            height:50,
+            borderRadius:5,
+            
+          }}
+          onClick={AddNewTrans}>Add Transaction</button>
         </div>
       </div>
     </div>

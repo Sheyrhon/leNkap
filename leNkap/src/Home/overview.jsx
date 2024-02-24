@@ -1,25 +1,31 @@
 import React, { useState } from "react";
 import AddTransaction from "../componets/Form/Form";
-
+import './style.css'
 const Overview = (props) => {
   const [isAddBtnVisible, toggleAddBtn] = useState(false);
 
   
   return (
     <div className="wrapper">
-      <div className="balnce-box">
-        Balance: ${props.incomes - props.expenses}
+      <div className="balnce-box" style={{justifyContent:'space-between',display:'flex'}}>
+      <p>Balance: ${props.incomes - props.expenses}</p>  
         <button
+        style={{width:120,
+        borderRadius:5,
+        
+        
+    }}
           onClick={() => {
             toggleAddBtn(!isAddBtnVisible);
           }}
-          className="add-transaction"
+          
         >
           {isAddBtnVisible ? "Cancel" : "ADD"}
         </button>
       </div>
       {isAddBtnVisible && (
         <AddTransaction
+        
           toggleAddBtn={toggleAddBtn}
           addTransaction={props.addTransaction}
         />

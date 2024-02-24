@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import TransactionElement from '../componets/transactions/TransElem'
-
+import './style.css'
 const Transaction = (props) => {
     const [filterTransactions, updatefilteredTransactions] = useState(props.transaction);
     const [searchTransaction, updateTransaction ]= useState('');
@@ -18,7 +18,7 @@ const Transaction = (props) => {
     useEffect(()=>filteredData(searchTransaction), [props.transaction]);
 
   return (
-    <div>
+    <div className='transaction'>
         <h2>Transactions</h2>
         <div className="input-box">
             <input type="text"
