@@ -31,7 +31,7 @@ const Login = () => {
           </label>
           <a href="#">Forgot Password</a>
         </div>
-        <button type="submit" ><a href="/ExpenseTracker"
+        <button type="submit" ><a href="ExpenseTracker"
         onClick={()=>{setShowProfile(true)}}>Login</a></button>
         <div className="register-link">
           <p>

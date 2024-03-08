@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Overview from "./overview";
 import Transaction from "./transaction";
-import Logout from "../componets/Logout/Logout";
-import Profile from "../componets/profile/profile";
-import Login from "../componets/Login/Login";
-import { LoginContext } from "../context/LoginContext";
 
 
 
@@ -50,7 +46,7 @@ const ExpenseTracker = () => {
         incomes={incomes}
       />
       <Transaction transaction={transaction} />
-      {/* <Logout/> */}
+    
     </div>
   );
 };

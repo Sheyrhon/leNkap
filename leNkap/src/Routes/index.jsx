@@ -14,8 +14,8 @@ export default function Index() {
   return (
     
       <Routes>
-        <Route path="Register" Component={Register}></Route>
-        <Route exact path="Login" Component={Login }></Route>
+        <Route  path="Register" Component={Register}></Route>
+        <Route  path="Login" Component={Login }></Route>
         
         <Route
           path="ExpenseTracker"

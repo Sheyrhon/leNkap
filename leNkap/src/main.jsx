@@ -8,8 +8,8 @@ import Index from './Routes/index.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-    {/* <App /> */}
-    <Index/>
+    <App />
+    {/* <Index/> */}
     </BrowserRouter>
    
   </React.StrictMode>,
