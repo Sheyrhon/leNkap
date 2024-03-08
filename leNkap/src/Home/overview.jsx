@@ -8,7 +8,7 @@ const Overview = (props) => {
   return (
     <div className="wrapper">
       <div className="balnce-box" style={{justifyContent:'space-between',display:'flex'}}>
-      <p>Balance: ${props.incomes - props.expenses}</p>  
+      <h3>Balance: ${props.incomes - props.expenses}</h3>  
         <button
         style={{width:120,
         borderRadius:5,
